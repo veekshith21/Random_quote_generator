@@ -1,43 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <link rel="stylesheet" href="../src/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />  
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>Random Quote Generator</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div class="sidenav">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+      <ul>
+        <li>
+          <a href="#">dropdown <i class="fas fa-caret-down"> </i> </a>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+      
+          <div class="dropdown-container">
+            <ul>
+              <li><a href="#">inspirational </a></li>
+              <li><a href="#">famous </a></li>
+              <li><a href="#">short</a></li>
+            </ul>
+          </div>
+        <li>
+          <a href="#login">Login</a>
+        </li>
+      </div>
+
+    <div id="wrapper">
+      <div id="quote-box">
+        <header>Quote of the day</header>
+        
+        <div class="quote-text">
+          
+          <i class="fa fa-quote-left"> </i><span id="text">The best time to plant a tree was 20 years ago. The second best time is now </span> <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="quote-author">- <span id="author"></span></div>
+        <div class="buttons">
+          <a
+            class="button"
+            id="tweet-quote"
+            title="Tweet this quote!"
+            target="_top"
+          >
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a
+            class="button"
+            id="copy"
+            title="copy this quote"
+            target="_blank"
+          >
+            <i class="fa fa-copy"></i>
+          </a>
+          <button class="button" id="new-quote">New quote</button>
+
+          
+        </div>
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="../src/index.js"></script>
   </body>
+
 </html>
